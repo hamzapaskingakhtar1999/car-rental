@@ -1,0 +1,199 @@
+.hero {
+    background: url("../../assets/Background/hero-bg.png");
+    background-repeat: no-repeat;
+    background-position: top right;
+    height: max-content;
+}
+
+.hero-flex {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 120px;
+}
+
+/* Left */
+.hero-left {
+    flex: 35%;
+}
+
+.hero-subheading {
+    font-size: 26px;
+}
+
+.hero-heading {
+    font-size: 54px;
+    font-weight: bolder;
+    margin: 10px 0;
+}
+
+.hero-description {
+    color: gray;
+    font-size: 18px;
+    margin: 40px 0;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.hero-button1 {
+    padding: 15px 25px;
+    color: white;
+    background-color: orangered;
+    font-size: 18px;
+    font-weight: 700;
+    border: none;
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0px 5px 10px 0px rgba(255,68,0,0.75);
+    -webkit-box-shadow: 0px 5px 10px 0px rgba(255,68,0,0.75);
+    -moz-box-shadow: 0px 5px 10px 0px rgba(255,68,0,0.75);
+
+}
+
+.hero-button1:hover {
+    background-color: rgb(255, 83, 20);
+    box-shadow: 0px 5px 10px 0px rgba(255,83,20,1);
+    -webkit-box-shadow: 0px 5px 10px 0px rgba(255,83,20,1);
+    -moz-box-shadow: 0px 5px 10px 0px rgba(255,83,20,1);
+}
+
+.hero-button2 {
+    padding: 15px 25px;
+    color: white;
+    background-color: black;
+    font-size: 18px;
+    font-weight: 700;
+    border: 2px solid black;
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.hero-button2:hover {
+    background-color: white;
+    color: black;
+}
+
+.button-icon {
+    font-size: 26px;
+}
+
+/* Hero Right */
+.hero-right {
+    flex: 70%;
+}
+
+.home-hero-image {
+    height: 500px;
+}
+
+/* Book a Car */
+.book-car {
+    padding: 30px;
+    background-color: white;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+}
+
+.book-heading {
+    font-size: 32px;
+}
+
+.book-car-items {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.book-car-item {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    gap: 10px;
+    margin: 20px 20px 20px 0;
+    
+}
+
+.book-car-heading {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 7px;
+}
+
+.book-car-icon {
+    color: orangered;
+    font-size: 22px;
+}
+
+.book-span {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.search-button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input,select {
+    border: 1px solid gray;
+    padding: 15px
+}
+
+input::placeholder,select {
+    color: gray;
+}
+
+input {
+    color: gray;
+}
+
+/* Media */
+@media screen and (max-width:768px) {
+    .hero-flex {
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    .hero-heading {
+        font-size:58px;
+    }
+
+    .hero-right{
+        display: none;
+    }
+    .hero-buttons {
+        flex-direction: column;
+        width: 70%;
+        margin: auto;
+    }
+    .hero-button1,.hero-button2 {
+        justify-content: center;
+    }
+
+    /* Book Car */
+
+    .book-car {
+        width: 70%;
+    }
+
+    .book-car-item {
+        width: 100%;
+    }
+}
