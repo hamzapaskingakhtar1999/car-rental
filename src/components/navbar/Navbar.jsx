@@ -21,26 +21,26 @@ const Navbar = () => {
       <img src={HPA} className="navbar-logo" />
 
       <ul className={`link-items ${active ? "active" : ""}`}>
-        <a href="#">
+        <a href="/">
           {" "}
           <li className="link-item">Home</li>
         </a>
-        <a href="#">
+        <a href="/about">
           <li className="link-item">About</li>
         </a>
-        <a href="#">
+        <a href="/vehiclemodels">
           {" "}
           <li className="link-item">Vehicle Models</li>
         </a>
-        <a href="#">
+        <a href="/testimonials">
           {" "}
           <li className="link-item">Testimonials</li>
         </a>
-        <a href="#">
+        <a href="/ourteam">
           {" "}
           <li className="link-item">Our Team</li>
         </a>
-        <a href="#">
+        <a href="/contact">
           {" "}
           <li className="link-item">Contact</li>
         </a>

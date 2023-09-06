@@ -1,0 +1,12 @@
+.team-items {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 100px;
+    text-align: center;
+}
+
+.team-image {
+    height: 350px;
+}

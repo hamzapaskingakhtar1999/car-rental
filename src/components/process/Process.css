@@ -3,6 +3,7 @@
     flex-direction: column;
     text-align: center;
     margin-top: 60px;
+    margin-bottom: 50px;
 }
 
 .process-heading {
@@ -37,7 +38,7 @@
 }
 
 .process-item-description {
-    font-size: 22px;
+    font-size: 21px;
     color: rgb(100, 100, 100);
 }
 

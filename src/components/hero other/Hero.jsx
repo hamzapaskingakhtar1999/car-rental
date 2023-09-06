@@ -6,9 +6,11 @@ import Navbar from "../navbar/Navbar";
 
 const Hero = () => {
   return (
-    <div className="hero-other">
-      <Navbar />
-    </div>
+    <>
+      <div className="hero-other">
+        <Navbar />
+      </div>
+    </>
   );
 };
 

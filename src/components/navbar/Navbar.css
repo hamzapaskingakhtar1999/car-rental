@@ -69,6 +69,11 @@ ul {
 
 /* Media Queries */
 @media screen and (max-width:768px) {
+
+    .navbar .link-items{
+        background-color: white;
+    }
+
     .hide {
         display: none;
     }

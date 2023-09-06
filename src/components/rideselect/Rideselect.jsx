@@ -1,88 +1,18 @@
 import React, { useState } from "react";
 
+/* React Spinners */
+import { ColorRing } from "react-loader-spinner";
+
 /* CSS */
 import "./Rideselect.css";
 
-/* Images */
-import i8 from "../../assets/cars/i8.png";
-import civic from "../../assets/cars/civic.jpg";
-import fortuner from "../../assets/cars/fortuner.png";
-import gli from "../../assets/cars/gli.jpg";
-import sclass from "../../assets/cars/sclass.png";
-import tx from "../../assets/cars/tx.jpg";
+/* Ride Data */
+import { ride } from "../../data/RideData";
 
 const Rideselect = () => {
   const [select, setSelect] = useState("0");
   const [active, setActive] = useState(0);
-
-  const ride = [
-    {
-      index: 0,
-      name: "BMW i8",
-      image: i8,
-      rent: 45,
-      model: "BMW",
-      year: 2018,
-      ac: "Yes",
-      transmission: "Auto",
-      fuel: "Petrol",
-    },
-    {
-      index: 1,
-      name: "Honda Civic",
-      image: civic,
-      rent: 20,
-      model: "Honda",
-      year: 2020,
-      ac: "Yes",
-      transmission: "Auto",
-      fuel: "Petrol",
-    },
-    {
-      index: 2,
-      name: "Toyota Fortuner Sigma",
-      image: fortuner,
-      rent: 25,
-      model: "Toyota",
-      year: 2021,
-      ac: "Yes",
-      transmission: "Auto",
-      fuel: "Diesel",
-    },
-    {
-      index: 3,
-      name: "Toyota Corolla GLI",
-      image: gli,
-      rent: 15,
-      model: "Toyota",
-      year: 2021,
-      ac: "Yes",
-      transmission: "Auto",
-      fuel: "Petrol",
-    },
-    {
-      index: 4,
-      name: "Mercedes Benz S-class",
-      image: sclass,
-      rent: 35,
-      model: "Mercedes Benz",
-      year: 2020,
-      ac: "Yes",
-      transmission: "Auto",
-      fuel: "Petrol",
-    },
-    {
-      index: 5,
-      name: "Land Cruiser TX",
-      image: tx,
-      rent: 30,
-      model: "Toyota",
-      year: 2022,
-      ac: "Yes",
-      transmission: "Auto",
-      fuel: "Diesel",
-    },
-  ];
+  const [loading, setLoading] = useState(true);
 
   return (
     <div className="rideselect center">
@@ -112,11 +42,49 @@ const Rideselect = () => {
             </div>
           ))}
         </div>
+        {/* Image Middle */}
         <div className="interactive-image-container">
           {ride.map((item) => (
             <div key={item.index}>
               {item.index == select && (
-                <img src={item.image} className="interactive-image" />
+                <>
+                  <img
+                    src={item.image}
+                    className="interactive-image"
+                    style={{
+                      display: loading ? "none" : "block",
+                    }}
+                    onLoad={(e) => {
+                      setLoading(false);
+                      console.log("LOADED");
+                    }}
+                  />
+                  <div
+                    className="spinner"
+                    style={{
+                      display: loading ? "block" : "none",
+                      margin: "auto",
+                      textAlign: "center",
+                    }}
+                  >
+                    <h1>{console.log("Hi")}</h1>
+                    <ColorRing
+                      visible={true}
+                      height="80"
+                      width="80"
+                      ariaLabel="blocks-loading"
+                      wrapperStyle={{}}
+                      wrapperClass="blocks-wrapper"
+                      colors={[
+                        "#e15b64",
+                        "#f47e60",
+                        "#f8b26a",
+                        "#abbd81",
+                        "#849b87",
+                      ]}
+                    />
+                  </div>
+                </>
               )}
             </div>
           ))}
